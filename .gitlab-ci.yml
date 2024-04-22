@@ -15,6 +15,7 @@ test:
     - docker
     - linux
   script:
+    - git submodule update --init --recursive
     - hugo
   rules:
     - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
@@ -24,6 +25,7 @@ pages:
     - docker
     - linux
   script:
+    - git submodule update --init --recursive
     - hugo
   artifacts:
     paths:
