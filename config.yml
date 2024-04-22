@@ -1,4 +1,4 @@
-baseURL: "https://www.crumblearn.org"
+baseURL: "/"
 title: CrumbLearn
 copyright: "CC BY-NC-SA 4.0 [OASCI](https://www.oasci.org/)"
 paginate: 5
