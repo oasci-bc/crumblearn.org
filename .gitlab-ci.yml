@@ -4,26 +4,10 @@ variables:
   HUGO_ENV: production
 
 default:
-  tags:
-    - docker
-    - linux
   before_script:
     - apk add --no-cache go curl bash nodejs
 
-test:
-  tags:
-    - docker
-    - linux
-  script:
-    - git submodule update --init --recursive
-    - hugo
-  rules:
-    - if: $CI_COMMIT_REF_NAME != $CI_DEFAULT_BRANCH
-
 pages:
-  tags:
-    - docker
-    - linux
   script:
     - git submodule update --init --recursive
     - hugo
