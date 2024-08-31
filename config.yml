@@ -2,24 +2,15 @@ baseURL: "http://www.crumblearn.org"
 title: Crumblearn
 copyright: "CC BY-NC-SA 4.0 [OASCI](https://www.oasci.org/)"
 paginate: 5
-# theme: [PaperMod]
 
 module:
   imports:
   - path: github.com/adityatelange/hugo-PaperMod
 
 enableInlineShortcodes: true
-enableRobotsTXT: true
-buildDrafts: false
-buildFuture: false
-buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
 mainsections: ["sites"]
-
-minify:
-  disableXML: true
-  # minifyOutput: true
 
 languages:
   en:
@@ -42,10 +33,9 @@ outputs:
     - JSON
 
 params:
-  env: production # to enable google analytics, opengraph, twitter-cards and schema.
+  env: production
   description: "Unlock knowledge, one crumb at a time."
   author: OASCI
-  # author: ["Me", "You"] # multiple authors
 
   defaultTheme: auto
   # disableThemeToggle: true
@@ -60,7 +50,7 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true
-  # comments: false
+  comments: false
   #images: ["images/papermod-cover.png"]
 
   profileMode:
@@ -96,24 +86,12 @@ params:
     - name: github
       title: View Source on GitHub
       url: "https://github.com/oasci"
-    - name: gitlab
-      title: View Source on GitLab
-      url: "https://gitlab.com/oasci"
-
-  # editPost:
-  #   URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
-  #   Text: "Suggest Changes" # edit text
-  #   appendFilePath: true # to append file path to Edit link
 
   # label:
   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
   # text: "Home"
   # icon: icon.png
   # iconHeight: 35
-
-  # analytics:
-  #     google:
-  #         SiteVerificationTag: "XYZabc"
 
   assets:
     disableHLJS: true
@@ -172,3 +150,12 @@ services:
     disableInlineCSS: true
   twitter:
     disableInlineCSS: true
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
